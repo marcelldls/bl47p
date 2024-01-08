@@ -19,7 +19,7 @@ echo "Loading IOC environment for bl46p ..."
 # use spaces to separate multiple mappings
 export EC_REGISTRY_MAPPING='github.com=ghcr.io'
 # the namespace to use for kubernetes deployments - use local for local docker/podman
-export EC_K8S_NAMESPACE=local
+export EC_K8S_NAMESPACE=p46-iocs
 # the git repo for this beamline (or accelerator domain)
 export EC_DOMAIN_REPO=git@github.com:subinsaji/bl46p.git
 # declare your centralised log server Web UI
@@ -51,15 +51,15 @@ source <(ec --show-completion ${SHELL})
 #### SECTION 3. Configure Kubernetes Cluster ###################################
 # example of how we set up a cluster at DLS is below
 # SET UP Connection to KUBERNETES CLUSTER and set default namespace.
-# if module --version &> /dev/null; then
-#     if module avail k8s-ixx > /dev/null; then
-#         module unload k8s-ixx > /dev/null
-#         module load k8s-ixx > /dev/null
-#         # set the default namespace for kubectl and helm (for convenience only)
-#         kubectl config set-context --current --namespace=ixx-iocs
-#         # get running iocs: makes sure the user has provided credentials
-#         ec ps
-#     fi
-# fi
+if module --version &> /dev/null; then
+    if module avail pollux > /dev/null; then
+        module unload pollux > /dev/null
+        module load pollux > /dev/null
+        # set the default namespace for kubectl and helm (for convenience only)
+        kubectl config set-context --current --namespace=p46-iocs
+        # get running iocs: makes sure the user has provided credentials
+        ec ps
+    fi
+fi
 
 
