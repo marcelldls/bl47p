@@ -15,7 +15,7 @@ entities:
   - type: ADAravis.aravisCamera
     CLASS: AVT_Mako_1_52
     ID: 192.168.250.28
-    P: BL46P-EA-DET-02
+    P: BL47P-EA-DET-02
     PORT: DET2.CAM
     R: ':DET:'
 
@@ -23,24 +23,24 @@ entities:
     ENABLED: 1
     NDARRAY_ADDR: 0
     NDARRAY_PORT: DET.CAM
-    P: BL46P-EA-DET-02
+    P: BL47P-EA-DET-02
     PORT: DET.PVA
-    PVNAME: BL46P-EA-DET-02:TX:PVA
+    PVNAME: BL47P-EA-DET-02:TX:PVA
     R: ':TX:'
     TIMEOUT: 0
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-02:DET:TriggerSource
+    pv: BL47P-EA-DET-02:DET:TriggerSource
     value: '"FixedRate"'
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-02:DET:GC_GevSCPSPacketSize
+    pv: BL47P-EA-DET-02:DET:GC_GevSCPSPacketSize
     value: "1500"
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-02:DET:ColorMode
+    pv: BL47P-EA-DET-02:DET:ColorMode
     value: '"RGB1"'
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-02:DET:AcquireTime
+    pv: BL47P-EA-DET-02:DET:AcquireTime
     value: "0.5"

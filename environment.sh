@@ -11,7 +11,7 @@ fi
 
 THIS_DIR=$(dirname ${0})
 
-echo "Loading IOC environment for bl46p ..."
+echo "Loading IOC environment for bl47p ..."
 
 #### SECTION 1. Environment variables ##########################################
 
@@ -19,9 +19,9 @@ echo "Loading IOC environment for bl46p ..."
 # use spaces to separate multiple mappings
 export EC_REGISTRY_MAPPING='github.com=ghcr.io'
 # the namespace to use for kubernetes deployments - use local for local docker/podman
-export EC_K8S_NAMESPACE=p46-iocs
+export EC_K8S_NAMESPACE=p47-iocs
 # the git repo for this beamline (or accelerator domain)
-export EC_DOMAIN_REPO=git@github.com:subinsaji/bl46p.git
+export EC_DOMAIN_REPO=git@github.com:subinsaji/bl47p.git
 # declare your centralised log server Web UI
 # export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{ioc_name}*'
 # enforce a specific container cli - defaults to whatever is available
@@ -56,7 +56,7 @@ if module --version &> /dev/null; then
         module unload pollux > /dev/null
         module load pollux > /dev/null
         # set the default namespace for kubectl and helm (for convenience only)
-        kubectl config set-context --current --namespace=p46-iocs
+        kubectl config set-context --current --namespace=p47-iocs
         # get running iocs: makes sure the user has provided credentials
         ec ps
     fi

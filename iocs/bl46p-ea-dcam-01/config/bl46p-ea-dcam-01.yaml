@@ -15,7 +15,7 @@ entities:
   - type: ADAravis.aravisCamera
     CLASS: AVT_Mako_1_52
     ID: 192.168.250.3
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.CAM
     R: ':DET:'
 
@@ -23,7 +23,7 @@ entities:
     ADDR: 0
     ENABLED: 1
     NDARRAY_PORT: DET.CAM
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.POS
     QUEUE: 1000
     R: ':POS:'
@@ -35,7 +35,7 @@ entities:
     HIST_SIZE: 256
     NCHANS: 1000
     NDARRAY_PORT: DET.POS
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.STAT
     QUEUE: 1000
     R: ':STAT:'
@@ -48,7 +48,7 @@ entities:
     ENABLED: 1
     NDARRAY_ADDR: 0
     NDARRAY_PORT: DET.STAT
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.HDF
     QUEUE: 1000
     R: ':HDF5:'
@@ -58,7 +58,7 @@ entities:
     FTVL: UCHAR
     NDARRAY_PORT: DET.CAM
     NELEMENTS: 38720
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.ARR
     R: ':ARR:'
     TYPE: Int8
@@ -67,9 +67,9 @@ entities:
     ENABLED: 1
     NDARRAY_ADDR: 0
     NDARRAY_PORT: DET.CAM
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.PVA
-    PVNAME: BL46P-EA-DET-01:TX:PVA
+    PVNAME: BL47P-EA-DET-01:TX:PVA
     R: ':TX:'
     TIMEOUT: 0
 
@@ -77,24 +77,24 @@ entities:
     ENABLED: 1
     NDARRAY_ADDR: 0
     NDARRAY_PORT: DET.CAM
-    P: BL46P-EA-DET-01
+    P: BL47P-EA-DET-01
     PORT: DET.PVA
-    PVNAME: BL46P-EA-DET-01:TX:PVA
+    PVNAME: BL47P-EA-DET-01:TX:PVA
     R: ':TX:'
     TIMEOUT: 0
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-01:DET:SizeY
+    pv: BL47P-EA-DET-01:DET:SizeY
     value: "20"
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-01:DET:OffsetY
+    pv: BL47P-EA-DET-01:DET:OffsetY
     value: "600"
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-01:DET:TriggerSource
+    pv: BL47P-EA-DET-01:DET:TriggerSource
     value: '"Line1"'
 
   - type: epics.Dbpf
-    pv: BL46P-EA-DET-01:DET:GC_GevSCPSPacketSize
+    pv: BL47P-EA-DET-01:DET:GC_GevSCPSPacketSize
     value: "1500"

@@ -1,7 +1,7 @@
 # default values for all IOCs on bl38p
 # see end of file for values that may be overridden per individual IOC
 
-beamline: bl46p
+beamline: bl47p
 # we use the default service account in the namespace so leave this out
 # if you need to specify an alternative then uncomment below
 # serviceAccountName: k8s-p38-iocs
