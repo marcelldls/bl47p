@@ -13,7 +13,7 @@ entities:
     IOC: '{{ ioc_name | upper }}'
 
   - type: ADAravis.aravisCamera
-    CLASS: AVT_Mako_1_52
+    CLASS: AVT_Mako_G125B
     ID: 192.168.250.3
     P: BL47P-EA-DET-01
     PORT: DET.CAM
@@ -62,16 +62,6 @@ entities:
     PORT: DET.ARR
     R: ':ARR:'
     TYPE: Int8
-
-  - type: ADCore.NDPvaPlugin
-    ENABLED: 1
-    NDARRAY_ADDR: 0
-    NDARRAY_PORT: DET.CAM
-    P: BL47P-EA-DET-01
-    PORT: DET.PVA
-    PVNAME: BL47P-EA-DET-01:TX:PVA
-    R: ':TX:'
-    TIMEOUT: 0
 
   - type: ADCore.NDPvaPlugin
     ENABLED: 1
