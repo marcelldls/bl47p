@@ -14,7 +14,7 @@ hostNetwork: true
 # Not using this now that we have cluster per beamline
 # However if you are using one cluster for multiple beamlines / domains
 # Then label the local nodes for each beamline and switch to true
-useAffinity: false
+useAffinity: true
 
 # root folder for ioc source/binaries inside generic IOC container
 iocFolder: /epics/ioc
@@ -38,15 +38,8 @@ globalenv:
 # reasonable defaults for securityContext
 securityContext:
   allowPrivilegeEscalation: false
-  # IMPORTANT if you want access to /dls/p38/data then the following should
-  # be set to p38detector account ID and group ID
-  # runAsUser: 37143
-  # runAsGroup: 37143
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
+  runAsUser: 37887
+  runAsGroup: 37887
 
 ########################################################################################
 # The following values are expected to be overridden in individual IOC values.yaml
@@ -63,18 +56,18 @@ ioc_version:
 # the PVC
 dataVolume:
   # Create a PVC called {{ .Chart.Name }}-data when true
-  pvc: true
+  pvc: false
   # A path on the host machine to write data into. Also used as the path that the
   # pvc or hostPath will be mounted at so that users need not be confused about
   # inside/outside container paths.
-  hostPath: /data/
+  hostPath: /dls/tmp
 
 # use the shared PVC for publishing opi files over http (see services/opis)
-opisClaim:
+opisClaim: bl47p-opi-claim
 # use the shared PVC for publishing opi files over http (see services/opis)
-runtimeClaim:
+runtimeClaim: bl47p-runtime-claim
 # use the shared PVC autosave files (comment out for no autosave)
-autosaveClaim:
+autosaveClaim: bl47p-autosave-claim
 
 # default resource limits
 resources:
@@ -85,4 +78,9 @@ resources:
     cpu: 100m
     memory: 64Mi
 
-
+# extra tolerations for the training rigs
+tolerations:
+  - key: nodetype
+    operator: "Equal"
+    value: training-rig
+    effect: "NoSchedule"

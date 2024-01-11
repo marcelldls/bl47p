@@ -8,5 +8,6 @@ type: application
 
 dependencies:
   - name: ioc-instance
-    version: "1.0.0"
+    version: "1.2.1"
     repository: "oci://ghcr.io/epics-containers"
+    #repository: "file:///scratch/hgv27681/work/ec-helm-charts/Charts/beamline-chart"
