@@ -60,7 +60,7 @@ dataVolume:
   # A path on the host machine to write data into. Also used as the path that the
   # pvc or hostPath will be mounted at so that users need not be confused about
   # inside/outside container paths.
-  hostPath: /dls/tmp
+  hostPath: /exports/mybeamline
 
 # use the shared PVC for publishing opi files over http (see services/opis)
 opisClaim: bl47p-opi-claim
