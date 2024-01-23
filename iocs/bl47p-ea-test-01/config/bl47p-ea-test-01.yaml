@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adsimdetector/releases/download/2024.1.1b1/ibek.ioc.schema.json
+# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adsimdetector/releases/download/2024.1.1/ibek.ioc.schema.json
 ioc_name: "{{ ioc_yaml_file_name }}"
 
 description: Example simulated camera for BL47P
