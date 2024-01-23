@@ -21,9 +21,9 @@ export EC_REGISTRY_MAPPING='github.com=ghcr.io'
 # the namespace to use for kubernetes deployments - use local for local docker/podman
 export EC_K8S_NAMESPACE=p47-iocs
 # the git repo for this beamline (or accelerator domain)
-export EC_DOMAIN_REPO=git@github.com:subinsaji/bl47p.git
+export EC_DOMAIN_REPO=git@github.com:epics-containers/bl47p.git
 # declare your centralised log server Web UI
-# export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{ioc_name}*'
+export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{ioc_name}*'
 # enforce a specific container cli - defaults to whatever is available
 # export EC_CONTAINER_CLI=podman
 # enable debug output in all 'ec' commands
