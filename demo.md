@@ -64,8 +64,11 @@ Steps
 - git tag
 - git tag 2024.1.next-number
 - ec ioc deploy bl47p-ea-dcam-01 2024.1.next-number
+- ec ps
 - **show that PVA is there in this version**
-- **show that Dashboard is registering the new version**
+***********************************************
+**show that Dashboard is registering the new version**
+***********************************************
 - **note that no code changes or recompilation happened to make this work**
 
 Now show the Panda GUI
