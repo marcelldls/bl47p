@@ -21,11 +21,10 @@ So, a few of us have been working on containersing EPICS IOCS and managing them
 in Kubernetes for a while. Today I'm going to show you what working with your
 beamline IOCs might look like in this new world.
 
-Instead of just diving into technical detail, I'm going to do a live demo and
-then show you where you can find all the documentation to get more info.
+This is going to be a live demo!!
 
 We will be looking at the training rig beamline P47.
-This beamline is running all its IOCs in Kubernetes, it has two
+This beamline is running all its IOCs in Kubernetes, it has a pmac clipper, two
 motors, two GigE cameras and a Panda Box.
 
 
@@ -46,10 +45,14 @@ Steps
   - **show tab completion for above**
 - ec ioc deploy bl47p-ea-dcam-01 2024.1.5
   - **show tab completion for above**
-- **show the pods in kubernetes**
-- **try to demo PVA viewwe but the plugin is missing from the IOC !**
-- **show that the two cams are the same image - show their config maps**
+***********************************************
+- **SHOW DASHBOARD - DISCUSS Generic images and SHOW CONFIG MAPS**
+***********************************************
+- **try to demo PVA viewer but the plugin is missing from the IOC !**
+- LIVE CODING
 - **edit iocs/bl47p-ea-dcam-01/config/bl47p-ea-dcam-01.yaml on the fly and add PVA plugin - showing schema auto completion**
+  - R: ":TX:"
+  - PVNAME: BL47P-EA-DET-01:TX:PVA
 - **also describe the beamline repo as you go**
 - ec deploy-local iocs/bl47p-ea-dcam-01
 - c2dv --pv BL47P-EA-DET-01:TX:PVA &
