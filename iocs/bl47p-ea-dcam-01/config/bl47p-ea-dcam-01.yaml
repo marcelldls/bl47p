@@ -22,8 +22,8 @@ entities:
     NDARRAY_PORT: DET.CAM
     P: BL47P-EA-DET-01
     PORT: DET.PVA
-    PVNAME: BL47P-EA-DET-01:TX:PVA
     R: ":TX:"
+    PVNAME: BL47P-EA-DET-01:TX:PVA
 
   - type: ADCore.NDPosPlugin
     NDARRAY_PORT: DET.CAM
