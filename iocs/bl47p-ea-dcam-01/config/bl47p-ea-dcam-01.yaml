@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2023.11.4/ibek.ioc.schema.json
+# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2024.1.2/ibek.ioc.schema.json
 
 ioc_name: "{{ ioc_yaml_file_name }}"
 
@@ -47,10 +47,10 @@ entities:
     R: ":ARR:"
     TYPE: Int8
 
-  - type: epics.Dbpf
+  - type: epics.dbpf
     pv: BL47P-EA-DET-01:DET:TriggerSource
     value: '"Line1"'
 
-  - type: epics.Dbpf
+  - type: epics.dbpf
     pv: BL47P-EA-DET-01:DET:GC_GevSCPSPacketSize
     value: "1500"

@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2023.11.4/ibek.ioc.schema.json
+# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2024.1.2/ibek.ioc.schema.json
 
 ioc_name: "{{ ioc_yaml_file_name }}"
 
@@ -28,18 +28,18 @@ entities:
     R: ":TX:"
     TIMEOUT: 0
 
-  - type: epics.Dbpf
+  - type: epics.dbpf
     pv: BL47P-EA-DET-02:DET:TriggerSource
     value: '"FixedRate"'
 
-  - type: epics.Dbpf
+  - type: epics.dbpf
     pv: BL47P-EA-DET-02:DET:GC_GevSCPSPacketSize
     value: "1500"
 
-  - type: epics.Dbpf
+  - type: epics.dbpf
     pv: BL47P-EA-DET-02:DET:ColorMode
     value: '"RGB1"'
 
-  - type: epics.Dbpf
+  - type: epics.dbpf
     pv: BL47P-EA-DET-02:DET:AcquireTime
     value: "0.5"
