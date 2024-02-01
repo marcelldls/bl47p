@@ -27,15 +27,10 @@ do
     if [ -n "${image}" ]; then
         echo "Validating ${service} with ${image}"
 
-        output=$(
-            docker run --rm --entrypoint bash \
-                -v ${service}/config:/config ${image} \
-                -c 'ibek runtime generate /config/ioc.yaml /epics/ibek-defs/*'
-        )
-        if grep -i error <<< "${output}"; then
-            echo "ERROR: ${service} failed validation"
-            echo "${output}"
-            exit 1
-        fi
+        # This will fail and exit if the ioc.yaml is invalid
+        docker run --rm --entrypoint bash \
+            -v ${service}/config:/config ${image} \
+            -c 'ibek runtime generate /config/ioc.yaml /epics/ibek-defs/*'
+
     fi
 done
