@@ -1,6 +1,6 @@
 # default values for all IOCs on bl47p beamline
 ioc-instance:
-  beamline: bl47p
+  domain: bl47p
   # we use the default service account in the namespace so leave this out
   # if you need to specify an alternative then uncomment below
   # serviceAccountName: k8s-p38-iocs

@@ -1,2 +1,1 @@
-epics-pvcs:
-  beamline: bl47p
+epics-pvcs: domain:l47p

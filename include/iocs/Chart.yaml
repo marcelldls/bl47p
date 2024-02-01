@@ -19,6 +19,6 @@ dependencies:
   - name: configmap
     version: "1.0.0"
     repository: file://../../helm/configmap
-  - name: beamline
+  - name: domain
     version: "1.0.0"
-    repository: file://../../helm/beamline
+    repository: file://../../helm/domain

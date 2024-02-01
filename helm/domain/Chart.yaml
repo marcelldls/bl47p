@@ -1,6 +1,6 @@
 # A Helm Chart for deploying an IOC instance
 apiVersion: v2
-name: beamline
+name: domain
 
 version: 1.0.0
 
