@@ -57,3 +57,8 @@ if module --version &> /dev/null; then
 fi
 
 
+# enable shell completion for k8s tools
+source <(helm completion $(basename ${SHELL}))
+source <(kubectl completion $(basename ${SHELL}))
+
+
