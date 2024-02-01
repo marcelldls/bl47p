@@ -1,1 +1,2 @@
-epics-pvcs: domain:l47p
+epics-pvcs:
+  domain: bl47p

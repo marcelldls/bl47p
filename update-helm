@@ -12,6 +12,8 @@ done
 # rebuild dependencies (depth first)
 for i in helm/* services/*; do
   if [ -f $i/Chart.yaml ]; then
-    helm dependency build $i
+    echo "Updating helm dependencies for $i"
+    # filter out the noisy "found symbolic link" messages
+    helm dependency build $i |& sed "/found symbolic/d"
   fi
 done

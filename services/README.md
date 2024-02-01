@@ -11,7 +11,7 @@ There are a number of helm charts that all domains will likely require. At prese
 
 - **epics-opis**: installs the web server that shares the engineering screens published by each IOC. The structure is two deep only: IOC names as folders at the root containing all the IOCs OPI files in a flat list.
 
-Deploy these charts to the beamline cluster using by setting up your cluster and namespace connection using environment.sh and then executing the following commands (requires that edge-containers-cli is installed):
+Deploy these charts to the domain cluster using by setting up your cluster and namespace connection using environment.sh and then executing the following commands (requires that edge-containers-cli is installed):
 
 ```bash
 ec list # lists the latest versions of all services
