@@ -8,13 +8,13 @@
 # other future services that don't use ibek, we will need to add a standard
 # entrypoint for validating the config folder mounted at /config.
 
-THIS=$(realpath $(dirname ${0})/../..)
+ROOT=$(realpath $(dirname ${0})/../..)
 set -xe
 
 # use docker if available else use podman
 if ! docker version &>/dev/null; then docker=podman; else docker=docker; fi
 
-for service in ${THIS}/services/*
+for service in ${ROOT}/services/*
 do
     # Skip if subfolder has no config to validate
     if [ ! -f "${service}/config/ioc.yaml" ]; then
