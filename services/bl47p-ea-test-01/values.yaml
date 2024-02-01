@@ -1,0 +1,3 @@
+beamline:
+  ioc-instance:
+    image: ghcr.io/epics-containers/ioc-adsimdetector-linux-runtime:2024.1.2
