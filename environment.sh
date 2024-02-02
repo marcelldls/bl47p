@@ -15,7 +15,7 @@ echo "Loading IOC environment for bl47p ..."
 
 #### SECTION 1. Environment variables ##########################################
 
-# a mapping between genenric IOC repo roots and the related container registry
+# a mapping between generic IOC repo roots and the related container registry
 # use spaces to separate multiple mappings
 export EC_REGISTRY_MAPPING='github.com=ghcr.io'
 # the namespace to use for kubernetes deployments - use local for local docker/podman
