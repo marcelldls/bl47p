@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://github.com/epics-containers/ioc-adsimdetector/releases/download/2024.1.2/ibek.ioc.schema.json
-ioc_name: "I HAVE NO NAME"
+ioc_name: "{{ __utils__.get_env('IOC_NAME') }}"
 
 description: Example simulated camera for BL47P
 
